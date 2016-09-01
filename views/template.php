@@ -1,39 +1,69 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <?= $view->render('head') ?>
-        <?php $view->style('theme', 'theme:css/theme.css') ?>
-        <?php $view->script('theme', 'theme:js/theme.js') ?>
+        <!--[if lte IE 8]><?php $view->script('theme', 'theme:js/ie/html5shiv.js') ?><![endif]-->
+        <?php $view->style('theme', 'theme:css/main.css') ?>
+        <!--[if lte IE 9]><?php $view->style('theme', 'theme:css/ie9.css') ?><![endif]-->
+        <!--[if lte IE 8]><?php $view->style('theme', 'theme:css/ie8.css') ?><![endif]-->
+        <?php $view->script('theme', 'theme:js/jquery.min.js') ?>
+        <?php $view->script('theme', 'theme:js/skel.min.js') ?>
+        <?php $view->script('theme', 'theme:js/util.js') ?>
+        <!--[if lte IE 8]><?php $view->script('theme', 'theme:js/ie/respond.min.js') ?><![endif]-->
+        <?php $view->script('theme', 'theme:js/main.js') ?>
+
     </head>
     <body>
+        <!-- Wrapper -->
+            <div id="wrapper">
 
-        <!-- Render logo or title with site URL -->
-        <a href="<?= $view->url()->get() ?>">
-            <?php if ($logo = $params['logo']) : ?>
-                <img src="<?= $this->escape($logo) ?>" alt="">
-            <?php else : ?>
-                <?= $params['title'] ?>
-            <?php endif ?>
-        </a>
+                <!-- Header -->
+                    <header id="header">
+                        <div class="inner">
 
-        <!-- Render menu position -->
-        <?php if ($view->menu()->exists('main')) : ?>
-            <?= $view->menu('main') ?>
-        <?php endif ?>
+                            <!-- Logo -->
+                                <a href="<?= $view->url()->get() ?>" class="logo">
+                                    <span class="symbol">
+                                        <?php if ($logo = $params['logo']) { ?>
+                                            <img src="<?= $this->escape($logo) ?>" alt="">
+                                        <?php } ?>
+                                    </span>
+                                    <span class="title"><?= $params['title'] ?></span>
+                                </a>
 
-        <!-- Render widget position -->
-        <?php if ($view->position()->exists('sidebar')) : ?>
-            <?= $view->position('sidebar') ?>
-        <?php endif; ?>
+                            <!-- Nav -->
+                                <nav>
+                                    <ul>
+                                        <li><a href="#menu">Menu</a></li>
+                                    </ul>
+                                </nav>
 
-        <!-- Render content -->
-        <?= $view->render('content') ?>
+                        </div>
+                    </header>
 
-        <!-- Insert code before the closing body tag  -->
-        <?= $view->render('footer') ?>
+                <!-- Menu -->
+                    <nav id="menu">
+                        <h2>Menu</h2>
+                        <?php if ($view->menu()->exists('main')) : ?>
+                            <?= $view->menu('main') ?>
+                        <?php endif ?>
+                    </nav>
+
+                <!-- Main -->
+                    <div id="main">
+                        <div class="inner">
+                            <!-- Render content -->
+                            <?= $view->render('content') ?>
+
+                        </div>
+                    </div>
+
+                <!-- Footer -->
+                    <?= $view->render('footer') ?>
+
+            </div>
 
     </body>
 </html>

@@ -28,7 +28,7 @@ return [
      */
     'positions' => [
 
-        'sidebar' => 'Sidebar',
+        // 'sidebar' => 'Sidebar',
 
     ],
 
