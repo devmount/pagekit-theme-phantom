@@ -1,5 +1,9 @@
 /app/bundle/*
 /node_modules
+/css
+/fonts
+/js
+/sass
 .DS_Store
 .idea
 *.zip
