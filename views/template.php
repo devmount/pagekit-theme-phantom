@@ -4,14 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <?= $view->render('head') ?>
-        <!--[if lte IE 8]><?php $view->script('theme', 'theme:js/ie/html5shiv.js') ?><![endif]-->
+        <!--[if lte IE 8]><script src="js/ie/html5shiv.js"></script><![endif]-->
         <?php $view->style('theme', 'theme:css/main.css') ?>
-        <!--[if lte IE 9]><?php $view->style('theme', 'theme:css/ie9.css') ?><![endif]-->
-        <!--[if lte IE 8]><?php $view->style('theme', 'theme:css/ie8.css') ?><![endif]-->
-        <?php $view->script('theme', 'theme:js/jquery.min.js') ?>
-        <?php $view->script('theme', 'theme:js/skel.min.js') ?>
-        <?php $view->script('theme', 'theme:js/util.js') ?>
-        <!--[if lte IE 8]><?php $view->script('theme', 'theme:js/ie/respond.min.js') ?><![endif]-->
+        <!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
+        <?php $view->script('theme-jquery', 'theme:js/jquery.min.js') ?>
+        <?php $view->script('theme-skel', 'theme:js/skel.min.js') ?>
+        <?php $view->script('theme-util', 'theme:js/util.js') ?>
+        <!--[if lte IE 8]><script src="js/ie/respond.min.js"></script><![endif]-->
         <?php $view->script('theme', 'theme:js/main.js') ?>
 
     </head>

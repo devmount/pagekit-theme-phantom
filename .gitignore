@@ -4,6 +4,7 @@
 /fonts
 /js
 /sass
+/.sass-cache
 .DS_Store
 .idea
 *.zip
