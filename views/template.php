@@ -29,8 +29,7 @@
                                         <?php if ($logo = $params['logo']) { ?>
                                             <img src="<?= $this->escape($logo) ?>" alt="">
                                         <?php } ?>
-                                    </span>
-                                    <span class="title"><?= $params['title'] ?></span>
+                                    </span><span class="title"><?= $params['title'] ?></span>
                                 </a>
 
                             <!-- Nav -->
