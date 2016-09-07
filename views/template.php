@@ -17,52 +17,52 @@
     </head>
     <body>
         <!-- Wrapper -->
-            <div id="wrapper">
+        <div id="wrapper">
 
-                <!-- Header -->
-                    <header id="header">
-                        <div class="inner">
+            <!-- Header -->
+            <header id="header">
+                <div class="inner">
 
-                            <!-- Logo -->
-                                <a href="<?= $view->url()->get() ?>" class="logo">
-                                    <span class="symbol">
-                                        <?php if ($logo = $params['logo']) { ?>
-                                            <img src="<?= $this->escape($logo) ?>" alt="">
-                                        <?php } ?>
-                                    </span><span class="title"><?= $params['title'] ?></span>
-                                </a>
+                    <!-- Logo -->
+                    <a href="<?= $view->url()->get() ?>" class="logo">
+                        <span class="symbol">
+                            <?php if ($logo = $params['logo']) { ?>
+                                <img src="<?= $this->escape($logo) ?>" alt="">
+                            <?php } ?>
+                        </span><span class="title"><?= $params['title'] ?></span>
+                    </a>
 
-                            <!-- Nav -->
-                                <nav>
-                                    <ul>
-                                        <li><a href="#menu">Menu</a></li>
-                                    </ul>
-                                </nav>
-
-                        </div>
-                    </header>
-
-                <!-- Menu -->
-                    <nav id="menu">
-                        <h2>Menu</h2>
-                        <?php if ($view->menu()->exists('main')) : ?>
-                            <?= $view->menu('main') ?>
-                        <?php endif ?>
+                    <!-- Mobile Nav -->
+                    <nav>
+                        <ul>
+                            <li><a href="#menu">Menu</a></li>
+                        </ul>
                     </nav>
 
-                <!-- Main -->
-                    <div id="main">
-                        <div class="inner">
-                            <!-- Render content -->
-                            <?= $view->render('content') ?>
+                </div>
+            </header>
 
-                        </div>
-                    </div>
+            <!-- Menu -->
+            <nav id="menu">
+                <h2>Menu</h2>
+                <?php if ($view->menu()->exists('main')) : ?>
+                    <?= $view->menu('main') ?>
+                <?php endif ?>
+            </nav>
 
-                <!-- Footer -->
-                    <?= $view->render('footer') ?>
+            <!-- Main -->
+            <div id="main">
+                <div class="inner">
+                    <!-- Render content -->
+                    <?= $view->render('content') ?>
 
+                </div>
             </div>
+
+            <!-- Footer -->
+            <?= $view->render('footer') ?>
+
+        </div>
 
     </body>
 </html>
