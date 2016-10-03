@@ -28,7 +28,9 @@ return [
      */
     'positions' => [
 
-        // 'sidebar' => 'Sidebar',
+        'contact' => 'Contact',
+        'socials' => 'Socials',
+        'copyright' => 'Copyright',
 
     ],
 

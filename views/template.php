@@ -60,7 +60,17 @@
             </div>
 
             <!-- Footer -->
-            <?= $view->render('footer') ?>
+            <footer id="footer">
+                <div class="inner">
+                    <section>
+                        <?= $view->position('contact') ?>
+                    </section>
+                    <section>
+                        <?= $view->position('socials') ?>
+                    </section>
+                    <?= $view->position('copyright') ?>
+                </div>
+            </footer>
 
         </div>
 
