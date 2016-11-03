@@ -32,6 +32,11 @@
                         </span><span class="title"><?= $params['title'] ?></span>
                     </a>
 
+                    <!-- Breadcrumps -->
+                    <div class="breadcrumbs">
+                        <?= $view->position('breadcrumbs') ?>
+                    </div>
+
                     <!-- Mobile Nav -->
                     <nav>
                         <ul>
