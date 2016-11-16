@@ -28,6 +28,7 @@ return [
      */
     'positions' => [
 
+        'breadcrumbs' => 'Breadcrumbs',
         'contact' => 'Contact',
         'socials' => 'Socials',
         'copyright' => 'Copyright',
